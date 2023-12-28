@@ -150,7 +150,7 @@ const AuthPage = () => {
                                 </Box>
                                 <Box>
                                     <Text>Phone Number</Text>
-                                    <Input type='number' name='phone_number' value={signupData?.phone_number} onChange={handleSignup} borderRadius={'5px'} p={'10px'} width={'40%'} />
+                                    <Input type='number' name='phone' value={signupData?.phone_number} onChange={handleSignup} borderRadius={'5px'} p={'10px'} width={'40%'} />
                                 </Box>
                                 <Box>
                                     <Text>Email</Text>
