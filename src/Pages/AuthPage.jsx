@@ -142,7 +142,7 @@ const AuthPage = () => {
                             <form onSubmit={handleSignupSubmit}>
                                 <Box>
                                     <Text>Name</Text>
-                                    <Input type='text' name='username' value={signupData?.name} onChange={handleSignup} borderRadius={'5px'} p={'10px'} width={'40%'} />
+                                    <Input type='text' name='name' value={signupData?.name} onChange={handleSignup} borderRadius={'5px'} p={'10px'} width={'40%'} />
                                 </Box>
                                 <Box>
                                     <Text>Username</Text>
