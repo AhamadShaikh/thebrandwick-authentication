@@ -119,6 +119,7 @@ const AuthPage = () => {
                         </Box>
                         <Box width={'50%'} display={'flex'} justifyContent={'center'} alignItems={'center'} backgroundColor={'orange'} borderRadius={'0px 20px 20px 0px'} >
                             <Box display={'flex'} flexDirection={'column'}>
+                                <Text as={'b'} fontSize={'40px'} mb={'50px'}>Sign In</Text>
                                 <Text border={'1px solid black'} borderRadius={'10px'} width={'200px'} padding={'5px'} as={'b'}>Go Back</Text>
                                 <Text>If you don't have an account??</Text>
                                 <Button backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} onClick={handleFlag}>
@@ -131,6 +132,7 @@ const AuthPage = () => {
                     <Box display={'flex'} justifyContent={'center'} width={'70%'} h={'550px'} border={'1px solid black'} borderRadius={'20px'}>
                         <Box width={'50%'} borderRadius={'20px 0px 0px 20px'} display={'flex'} justifyContent={'center'} alignItems={'center'} backgroundColor={'orange'} >
                             <Box display={'flex'} flexDirection={'column'}>
+                                <Text as={'b'} fontSize={'40px'} mb={'50px'}>Sign Up</Text>
                                 <Text border={'1px solid black'} borderRadius={'10px'} width={'200px'} padding={'5px'} as={'b'}>Welcome Back</Text>
                                 <Text>If you already have an account</Text>
                                 <Button backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} onClick={handleFlag}>
