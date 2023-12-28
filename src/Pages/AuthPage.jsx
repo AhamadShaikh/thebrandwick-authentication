@@ -60,7 +60,13 @@ const AuthPage = () => {
 
             if (response.ok) {
                 alert("User Registered Successfully")
-                setSignupData(signupInitialState)
+                setSignupData({
+                    name: '',
+                    username: '',
+                    phone: '',
+                    email: '',
+                    password: '',
+                })
             } else {
                 alert('User Already Registered');
             }
@@ -113,7 +119,10 @@ const AuthPage = () => {
                                     <Input type='text' name='password' value={loginData?.password} onChange={handleLogin} borderRadius={'5px'} p={'10px'} width={'200px'} />
                                 </Box>
                                 <Box>
-                                    <Input type='submit' value={'Sign In'} backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} m={'20px'} />
+                                    <Input type='submit' value={'Sign In'} backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} m={'20px'} _hover={{
+                                        backgroundColor: '#024D55',
+                                        cursor: 'pointer'
+                                    }} />
                                 </Box>
                             </form>
                         </Box>
@@ -122,7 +131,10 @@ const AuthPage = () => {
                                 <Text as={'b'} fontSize={'40px'} mb={'50px'}>Sign In</Text>
                                 <Text border={'1px solid black'} borderRadius={'10px'} width={'200px'} padding={'5px'} as={'b'}>Go Back</Text>
                                 <Text>If you don't have an account?</Text>
-                                <Button backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} onClick={handleFlag}>
+                                <Button backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} onClick={handleFlag} _hover={{
+                                    backgroundColor: '#024D55',
+                                    cursor: 'pointer'
+                                }}>
                                     Sign Up
                                 </Button>
                             </Box>
@@ -135,7 +147,10 @@ const AuthPage = () => {
                                 <Text as={'b'} fontSize={'40px'} mb={'50px'}>Sign Up</Text>
                                 <Text border={'1px solid black'} borderRadius={'10px'} width={'200px'} padding={'5px'} as={'b'}>Welcome Back</Text>
                                 <Text>If you already have an account?</Text>
-                                <Button backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} onClick={handleFlag}>
+                                <Button backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} onClick={handleFlag} _hover={{
+                                    backgroundColor: '#024D55',
+                                    cursor: 'pointer'
+                                }}>
                                     Sign In
                                 </Button>
                             </Box>
@@ -163,7 +178,10 @@ const AuthPage = () => {
                                     <Input type='text' name='password' value={signupData?.password} onChange={handleSignup} borderRadius={'5px'} p={'10px'} width={'40%'} />
                                 </Box>
                                 <Box>
-                                    <Input type='submit' value={'Sign Up'} backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} m={'20px'} />
+                                    <Input type='submit' value={'Sign Up'} backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} m={'20px'} _hover={{
+                                        backgroundColor: '#024D55',
+                                        cursor: 'pointer'
+                                    }} />
                                 </Box>
                             </form>
                         </Box>
