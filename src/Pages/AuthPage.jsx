@@ -44,22 +44,33 @@ const AuthPage = () => {
 
     const handleLogout = async () => {
         try {
+            const token = JSON.parse(localStorage.getItem('token'));
+    
+            if (!token) {
+                alert("User is not logged in.");
+                return;
+            }
+    
             const response = await fetch('https://thebrandwick-auth-api.onrender.com/api/logout', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
-                    authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
+                    'authorization': `Bearer ${token}`
                 },
             });
+    
             if (response.ok) {
                 alert("User Logout Successfully");
             } else {
+                console.error("Logout failed. Status:", response.status);
                 alert("Logout failed. Please try again.");
             }
         } catch (error) {
-            console.log(error)
+            console.error("Error during logout:", error);
+            alert("An error occurred during logout. Please try again.");
         }
-    }
+    };
+    
 
     const handleSignupSubmit = async (e) => {
         e.preventDefault();
@@ -112,7 +123,7 @@ const AuthPage = () => {
 
             let data = await response.json()
             if (data.token) {
-                localStorage.setItem("token", data.token)
+                localStorage.setItem("token", JSON.stringify(data.token))
                 alert("User Logged In Successfully")
                 setLoginData(loginInitialState)
             } else {
