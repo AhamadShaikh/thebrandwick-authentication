@@ -61,6 +61,7 @@ const AuthPage = () => {
     
             if (response.ok) {
                 alert("User Logout Successfully");
+                localStorage.setItem("token", JSON.stringify(""))
             } else {
                 console.error("Logout failed. Status:", response.status);
                 alert("Logout failed. Please try again.");
