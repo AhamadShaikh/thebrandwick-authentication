@@ -51,7 +51,11 @@ const AuthPage = () => {
                     authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
                 },
             });
-            alert("User Logout Successfully")
+            if (response.ok) {
+                alert("User Logout Successfully");
+            } else {
+                alert("Logout failed. Please try again.");
+            }
         } catch (error) {
             console.log(error)
         }
