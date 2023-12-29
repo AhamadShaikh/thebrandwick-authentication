@@ -20,12 +20,13 @@ API Endpoints
 **API Endpoints**
 
 # User Registration
-![Screenshot (5456)](https://github.com/AhamadShaikh/thebrandwick-authentication/assets/115461870/e4550746-aa42-4fbd-bbf1-4548d477e649)
+![Screenshot (5459)](https://github.com/AhamadShaikh/thebrandwick-authentication/assets/115461870/a7e3c727-27d1-4a0d-8fb1-247818f197ec)
+
 
 **Endpoint: POST /register**
 
 # User Login
-![Screenshot (5457)](https://github.com/AhamadShaikh/thebrandwick-authentication/assets/115461870/aaf3c474-1d07-4494-862e-636555a58066)
+![Screenshot (5458)](https://github.com/AhamadShaikh/thebrandwick-authentication/assets/115461870/44ebd961-aa38-4843-8eff-5d5b28c8bf85)
 
 
 **Endpoint: POST /login**
