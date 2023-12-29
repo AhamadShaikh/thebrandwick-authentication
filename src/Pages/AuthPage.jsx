@@ -42,6 +42,21 @@ const AuthPage = () => {
         setLoginData((prev) => ({ ...prev, [name]: value }))
     }
 
+    const handleLogout = async () => {
+        try {
+            const response = await fetch('https://thebrandwick-auth-api.onrender.com/api/logout', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    authorization:`Bearer ${JSON.parse(localStorage.getItem('token'))}`
+                },
+            });
+            alert("User Logout Successfully")
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     const handleSignupSubmit = async (e) => {
         e.preventDefault();
         if (signupData.email === "" || signupData.password === "" || signupData.username === "") {
@@ -93,6 +108,7 @@ const AuthPage = () => {
 
             let data = await response.json()
             if (data.token) {
+                localStorage.setItem("token", data.token)
                 alert("User Logged In Successfully")
                 setLoginData(loginInitialState)
             } else {
@@ -136,6 +152,12 @@ const AuthPage = () => {
                                     cursor: 'pointer'
                                 }}>
                                     Sign Up
+                                </Button>
+                                <Button backgroundColor="teal" color={'white'} size="md" p={'10px 30px'} borderRadius={'20px'} onClick={handleLogout} mt={'10px'} _hover={{
+                                    backgroundColor: '#024D55',
+                                    cursor: 'pointer'
+                                }}>
+                                    Log out
                                 </Button>
                             </Box>
                         </Box>
